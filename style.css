@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.white-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nav-container {
+    padding: 2rem 5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.nav-tabs,
+.nav-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-tabs span {
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-tabs span::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: -10;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-tabs span:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #000000;
+}
+
+.nav-socials a {
+    text-decoration: none;
+}
+
+.nav-socials i {
+    font-size: 1.5rem;
+}
+
+/* #mail {
+    color: red;
+} */
+
+#discord {
+    color: #ffffff;
+    background-color: #5865f2;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+#linkedIn {
+    color: #ffffff;
+    background-color: #2a67bc;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+#gitHub {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+#twitter {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.profile-container {
+    width: 100%;
+    height: 87vh;
+    display: flex;
+    gap: 10vw;
+    padding: 0 5vw;
+}
+
+#mode {
+    cursor: pointer;
+}
+
+.profile-img,
+.profile {
+    width: 50%;
+    height: 100%;
+}
+
+.profile {
+    padding: 0 2%;
+    transition: all ease 0.2s;
+}
+
+#name,
+#profileSkill {
+    overflow: hidden;
+}
+
+.profile h1 {
+    margin-top: 15vh;
+    font-size: 3.5vw;
+    text-transform: capitalize;
+}
+
+.profile h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 2vw;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1% 2%;
+    border-radius: 10px;
+    text-transform: capitalize;
+    margin: 4vh 0;
+}
+
+.profile p {
+    height: 30%;
+    overflow-y: scroll;
+    margin: 3% 0;
+}
+
+.profile p::-webkit-scrollbar {
+    display: none;
+}
+
+#resume {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 1% 2%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#resume h3,
+#resume i {
+    font-size: 1vw;
+}
