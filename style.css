@@ -13,6 +13,65 @@ html {
     height: 100%;
 }
 
+@keyframes background-color-animation {
+    0% {
+        background-color: rgb(160, 140, 212);
+        background-color: rgb(160, 140, 212);
+    }
+
+    20% {
+        background-color: rgb(114, 94, 163);
+        background-color: rgb(114, 94, 163);
+    }
+
+    40% {
+        background-color: rgb(83, 67, 113);
+        background-color: rgb(83, 67, 113);
+    }
+
+    60% {
+        background-color: rgb(139, 107, 180);
+        background-color: rgb(139, 107, 180);
+    }
+
+    80% {
+        background-color: rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
+    }
+
+    100% {
+        background-color: rgb(182, 146, 227);
+        background-color: rgb(182, 146, 227);
+    }
+}
+
+@keyframes color-animation {
+    0% {
+        color: rgb(215, 192, 217);
+        color: rgb(215, 192, 217);
+    }
+
+    25% {
+        color: rgb(230, 171, 244);
+        color: rgb(230, 171, 244);
+    }
+
+    50% {
+        color: rgb(205, 140, 235);
+        color: rgb(205, 140, 235);
+    }
+
+    75% {
+        color: rgb(110, 82, 171);
+        color: rgb(110, 82, 171);
+    }
+
+    100% {
+        color: rgb(218, 160, 247);
+        color: rgb(218, 160, 247);
+    }
+}
+
 .page1-container {
     background-image: url(assets/banner-bg.png);
     background-position: top center;
@@ -36,7 +95,7 @@ html {
 }
 
 .nav-tabs span {
-    color: #ffffff;
+    animation: color-animation 5s infinite;
     text-transform: capitalize;
     cursor: pointer;
     position: relative;
@@ -54,7 +113,7 @@ html {
     height: 1px;
     left: 50%;
     position: absolute;
-    background: #ffffff;
+    animation: background-color;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -72,8 +131,6 @@ html {
     text-decoration: none;
     width: 50px;
     height: 50px;
-    /* background-color: #282c34; */
-    /* background-color: transparent; */
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     position: relative;
@@ -84,7 +141,7 @@ html {
     width: 50px;
     height: 50px;
     position: absolute;
-    background-color: #ffffff;
+    animation: background-color-animation 5s infinite;
     border-radius: 50%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
@@ -147,7 +204,6 @@ html {
 
 #twitter {
     color: #ffffff;
-    /* background-color: #000000; */
     border-radius: 5px;
     padding: 1px;
 }
@@ -205,13 +261,14 @@ html {
     margin-top: 15vh;
     font-size: 3.5vw;
     text-transform: capitalize;
+    animation: color-animation 5s infinite;
 }
 
 .profile h2 {
     position: relative;
     display: inline-block;
     font-size: 2vw;
-    background-color: #000000;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
     padding: 1% 2%;
     border-radius: 10px;
     text-transform: capitalize;
@@ -222,6 +279,7 @@ html {
     height: 30%;
     overflow-y: scroll;
     margin: 3% 0;
+    color: #b8b8b8;
 }
 
 .profile p::-webkit-scrollbar {
@@ -235,7 +293,7 @@ html {
     align-items: center;
     gap: 0.5rem;
     text-transform: capitalize;
-    background-color: #000000;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
     padding: 1% 2%;
     border-radius: 5px;
     overflow: hidden;
@@ -247,24 +305,29 @@ html {
 }
 
 .skills-section {
+    padding-top: 10vh;
     width: 100%;
     height: 100%;
+    background-color: #151515;
 }
 
 .skill-container {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5vh 20vw;
-    background-color: rgb(218, 218, 218);
     border-radius: 4rem;
+    background-image: url(assets/footer-bg.png);
+    background-position: top center;
+    color: #ffffff;
 }
 
 .skill-container h2 {
     text-transform: capitalize;
     font-size: 2vw;
+    animation: color-animation 5s infinite;
 }
 
 .skill-info {
@@ -314,9 +377,10 @@ html {
 }
 
 .circular-chart.orange .circle {
-    stroke: #ff9f00;
+    stroke: #ff9f00
 }
 
+/* background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%); */
 .percentage {
     fill: #666;
     font-family: sans-serif;

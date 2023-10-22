@@ -1,56 +1,30 @@
-let profileSkill = document.querySelector(".profile h2");
-let resume = document.querySelector("#resume");
-
-function mousecursor() {
-  let cursor = document.querySelector("#cursor");
-  document.addEventListener("mouseenter", () => {
-    gsap.to(cursor, {
-      scale: 1,
-    });
-  });
-  document.addEventListener("mouseleave", () => {
-    gsap.to(cursor, {
-      scale: 0,
-    });
-  });
-  document.addEventListener("mousemove", (dets) => {
-    gsap.to(cursor, {
-      left: dets.x,
-      top: dets.y,
-    });
-  });
-}
-
-mousecursor();
-
 function profileAnimation() {
   let tl = gsap.timeline();
-  let profileName = document.querySelector(".profile h1");
-  tl.from(profileName, {
+  tl.from(".profile h1, #profileSkill h2", {
     y: 100,
-    duration: 0.5,
-    delay: 0.3,
+    duration: 1,
+    delay: 0.5,
   });
-  tl.from(profileSkill, {
-    y: 100,
+  gsap.from(".profile-img img", {
+    opacity: 0,
+    delay: 0.5,
   });
   let navtl = gsap.timeline();
-  let tabs = document.querySelectorAll(".nav-tabs span");
-  tabs.forEach((tab) => {
-    navtl.from(tab, {
-      y: -100,
-      duration: 0.5,
-      opacity: 0,
-    });
+  navtl.from(" .nav-socials a", {
+    y: -100,
+    duration: 1,
+    delay: 0.2,
+    opacity: 0,
+    stagger: 0.3,
   });
+
   let soctl = gsap.timeline();
-  let socials = document.querySelectorAll(".nav-socials a");
-  socials.forEach((s) => {
-    soctl.from(s, {
-      y: -100,
-      duration: 0.5,
-      opacity: 0,
-    });
+  soctl.from("#articles,#projects, #about, #home", {
+    y: -100,
+    duration: 1,
+    delay: 0.2,
+    opacity: 0,
+    stagger: 0.3,
   });
 }
 profileAnimation();
