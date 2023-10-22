@@ -1,5 +1,28 @@
 let profileSkill = document.querySelector(".profile h2");
 let resume = document.querySelector("#resume");
+
+function mousecursor() {
+  let cursor = document.querySelector("#cursor");
+  document.addEventListener("mouseenter", () => {
+    gsap.to(cursor, {
+      scale: 1,
+    });
+  });
+  document.addEventListener("mouseleave", () => {
+    gsap.to(cursor, {
+      scale: 0,
+    });
+  });
+  document.addEventListener("mousemove", (dets) => {
+    gsap.to(cursor, {
+      left: dets.x,
+      top: dets.y,
+    });
+  });
+}
+
+mousecursor();
+
 function profileAnimation() {
   let tl = gsap.timeline();
   let profileName = document.querySelector(".profile h1");
