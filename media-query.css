@@ -1,5 +1,5 @@
 @media (max-width:900px) {
-    .profile p {
+    p {
         font-size: 0.7rem;
     }
 
@@ -10,6 +10,17 @@
 
     .profile h2 {
         font-size: 3.4vw;
+    }
+
+    .project-showcase {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .skills-section {
+        height: 70vh;
     }
 }
 
@@ -22,9 +33,18 @@
         width: 6vw;
         height: 6vw;
     }
+
+    .project-heading {
+        margin-bottom: 8vh;
+    }
+
 }
 
 @media (max-width:600px) {
+    p {
+        font-size: 0.9rem;
+    }
+
     .profile-container {
         display: flex;
         flex-direction: column;
@@ -41,12 +61,11 @@
         height: fit-content;
         position: absolute;
         right: 5%;
-        top: 10%;
+        top: 15%;
     }
 
     .profile p {
         margin-top: 8vh;
-        font-size: 0.9rem;
     }
 
     .profile h2 {
@@ -69,9 +88,17 @@
     .profile h2 {
         margin-top: 8vh;
     }
+
+    .project-heading {
+        margin-bottom: 8vh;
+    }
+
 }
 
 @media (max-width: 500px) {
+    p {
+        font-size: 0.6rem;
+    }
 
     .profile h1 {
         margin-top: 5vh;
@@ -89,7 +116,7 @@
         visibility: visible;
         width: 70%;
         right: 5%;
-        top: 20%;
+        top: 15%;
     }
 
     .profile p {
@@ -99,5 +126,27 @@
 
     .nav-socials a {
         display: none;
+    }
+
+    .crossanimation {
+        display: block;
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .project-showcase {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        row-gap: 3vw;
+    }
+
+    .project-heading {
+        margin-bottom: 8vh;
+    }
+
+    .skills-section {
+        height: 50vh;
     }
 }

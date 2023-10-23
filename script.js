@@ -17,7 +17,7 @@ function profileAnimation() {
     delay: 0.5,
   });
   let navtl = gsap.timeline();
-  navtl.from(" .nav-socials a", {
+  navtl.from(" .nav-socials a, .nav-socials div", {
     y: -100,
     duration: 1,
     delay: 0.2,
@@ -35,3 +35,12 @@ function profileAnimation() {
   });
 }
 profileAnimation();
+
+function cross_animation() {
+  let cross = document.querySelector(".crossanimation");
+  cross.addEventListener("click", () => {
+    cross.classList.toggle("cross-animation");
+  });
+}
+
+cross_animation();

@@ -48,33 +48,28 @@ html {
 
 @keyframes border-color-animation {
     0% {
-        border-color: rgb(176, 166, 200);
-        border-color: rgb(160, 140, 212);
+        border-color: rgb(215, 192, 217);
+        border-color: rgb(215, 192, 217);
     }
 
-    20% {
-        border-color: rgb(114, 94, 163);
-        border-color: rgb(114, 94, 163);
+    25% {
+        border-color: rgb(230, 171, 244);
+        border-color: rgb(230, 171, 244);
     }
 
-    40% {
-        border-color: rgb(83, 67, 113);
-        background-color: rgb(83, 67, 113);
+    50% {
+        border-color: rgb(205, 140, 235);
+        border-color: rgb(205, 140, 235);
     }
 
-    60% {
-        border-color: rgb(139, 107, 180);
-        border-color: rgb(139, 107, 180);
-    }
-
-    80% {
-        border-color: rgb(160, 140, 212);
-        border-color: rgb(160, 140, 212);
+    75% {
+        border-color: rgb(110, 82, 171);
+        border-color: rgb(110, 82, 171);
     }
 
     100% {
-        border-color: rgb(182, 146, 227);
-        border-color: rgb(182, 146, 227);
+        border-color: rgb(218, 160, 247);
+        border-color: rgb(218, 160, 247);
     }
 }
 
@@ -129,6 +124,7 @@ html {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    position: relative;
 }
 
 @keyframes updownsoc {
@@ -269,6 +265,45 @@ html {
     background: transparent;
 }
 
+.crossanimation {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.crossanimation span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s, width 0.5s ease-in-out;
+}
+
+#span1 {
+    transform: translate(-50%, -6px);
+}
+
+#span3 {
+    transform: translate(-50%, 6px);
+}
+
+.cross-animation #span1 {
+    transform: translate(-50%) rotate(-45deg);
+}
+
+.cross-animation #span3 {
+    transform: translate(-50%) rotate(45deg);
+}
+
+.cross-animation #span2 {
+    width: 0%;
+}
+
 #mode {
     cursor: pointer;
 }
@@ -289,15 +324,15 @@ html {
 
 @keyframes updown {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 
     50% {
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
 
     100% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
 
@@ -358,7 +393,7 @@ html {
 .skills-section {
     padding-top: 10vh;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #151515;
 }
 
@@ -454,6 +489,7 @@ html {
 
 .skill-representation h3 {
     text-transform: uppercase;
+    font-size: 1.5vw;
 }
 
 .project-container {
@@ -483,7 +519,7 @@ html {
 }
 
 .projects {
-    width: 24vw;
+    width: 100%;
     height: 36vh;
     background: url(assets/about-image.png);
     background-size: cover;
@@ -493,7 +529,15 @@ html {
     border-radius: 30px;
     position: relative;
     overflow: hidden;
+    /* box-shadow: 10px 10px 10px rgba(170, 54, 124, 0.5), 10px 10px 20px rgba(74, 47, 189, 0.5), ; */
+    box-shadow:
+        1px 2px 30px rgba(170, 54, 124, 0.363),
+        1px 2px 30px rgba(74, 47, 189, 0.363),
+        1px 2px 30px rgba(170, 54, 124, 0.363),
+        1px 2px 30px rgba(74, 47, 189, 0.363);
 }
+
+/* linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%); */
 
 .projects::before {
     content: "";
@@ -538,5 +582,5 @@ html {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
-    row-gap: 3vw;
+    gap: 3vw;
 }
