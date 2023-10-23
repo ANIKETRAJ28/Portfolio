@@ -1,9 +1,16 @@
 function profileAnimation() {
   let tl = gsap.timeline();
-  tl.from(".profile h1, #profileSkill h2", {
+  tl.from(".profile h1", {
     y: 100,
     duration: 1,
     delay: 0.5,
+  });
+  gsap.from("#profileSkill h2", {
+    y: 100,
+    duration: 1,
+    delay: 0.5,
+    opacity: 0,
+    duration: 1.5,
   });
   gsap.from(".profile-img img", {
     opacity: 0,
