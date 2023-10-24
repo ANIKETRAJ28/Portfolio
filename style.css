@@ -116,6 +116,8 @@ html {
     background-color: transparent;
     position: fixed;
     z-index: 999;
+    border-radius: 2vw;
+    backdrop-filter: blur(5px);
 }
 
 .nav-tabs,
@@ -125,6 +127,24 @@ html {
     justify-content: center;
     gap: 1rem;
     position: relative;
+}
+
+.nav-tabs-spans {
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    left: 0%;
+    height: fit-content;
+    width: 0px;
+    margin: 0 auto;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.8) -5.91%, rgba(74, 47, 189, 0.8) 111.58%);
+    z-index: 2;
+    justify-content: space-between;
+    border-radius: 4vw;
+    padding: 2vh 0;
+    visibility: hidden;
+
 }
 
 @keyframes updownsoc {
@@ -186,8 +206,8 @@ html {
 
 .nav-socials a::before {
     content: "";
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     animation: background-color-animation 5s infinite;
     border-radius: 50%;
@@ -270,13 +290,44 @@ html {
     width: 50px;
     height: 50px;
     position: relative;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1px;
+    z-index: 10;
+}
+
+.crossanimation::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: background-color-animation 5s infinite;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+    top: 1%;
+    left: 1%;
+}
+
+.crossanimation:hover:before {
+    transform: scale(1);
+}
+
+.crossanimation:hover #span1,
+.crossanimation:hover #span2,
+.crossanimation:hover #span3 {
+    background-color: #000000;
+    z-index: 2;
+
 }
 
 .crossanimation span {
     position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #fff;
+    width: 70%;
+    height: 0.1vw;
+    background-color: #ffffff;
     display: block;
     top: 50%;
     left: 50%;
@@ -285,11 +336,11 @@ html {
 }
 
 #span1 {
-    transform: translate(-50%, -6px);
+    transform: translate(-50%, -1vw);
 }
 
 #span3 {
-    transform: translate(-50%, 6px);
+    transform: translate(-50%, 1vw);
 }
 
 .cross-animation #span1 {
@@ -316,7 +367,6 @@ html {
 }
 
 .profile-img img {
-    /* margin-top: 5vh; */
     width: 100%;
     height: 90%;
     animation: updown 3s linear infinite;
@@ -413,7 +463,6 @@ html {
 
 .skill-container h1 {
     text-transform: capitalize;
-    font-size: 2vw;
     animation: color-animation 5s infinite;
 }
 
@@ -545,7 +594,7 @@ html {
     width: 100%;
     height: 0;
     background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-    opacity: 0.6;
+    opacity: 0.8;
     top: 0;
     left: 0;
     z-index: 1;
@@ -575,6 +624,7 @@ html {
 
 .projects:hover::before {
     height: 100%;
+    filter: blur(30px);
 }
 
 .project-showcase {
