@@ -140,7 +140,7 @@
         height: 70vh;
     }
 
-    .nav-tabs>span {
+    .nav-tabs>a {
         display: none;
     }
 

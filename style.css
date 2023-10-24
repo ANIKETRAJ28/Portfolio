@@ -14,6 +14,10 @@ html {
     height: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 @keyframes background-color-animation {
     0% {
         background-color: rgb(160, 140, 212);
@@ -161,18 +165,18 @@ html {
     }
 }
 
-.nav-tabs span {
+.nav-tabs a {
     animation: color-animation 5s infinite;
     text-transform: capitalize;
     cursor: pointer;
     position: relative;
 }
 
-.nav-tabs span:hover {
+.nav-tabs a:hover {
     font-weight: 800;
 }
 
-.nav-tabs span::after {
+.nav-tabs a::after {
     background: none repeat scroll 0 0 transparent;
     bottom: -10;
     content: "";
@@ -185,7 +189,7 @@ html {
     width: 0;
 }
 
-.nav-tabs span:hover::after {
+.nav-tabs a:hover::after {
     width: 100%;
     left: 0;
     background-color: #ffffff;
@@ -546,6 +550,7 @@ html {
     margin: 0 auto;
     background-color: #151515;
     padding: 0 10vw;
+    position: relative;
 }
 
 .project-heading {
@@ -592,13 +597,14 @@ html {
     content: "";
     position: absolute;
     width: 100%;
-    height: 0;
+    height: 100%;
     background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-    opacity: 0.8;
+    opacity: 0.5;
     top: 0;
     left: 0;
     z-index: 1;
-    transition: 0.6s ease-in-out;
+    visibility: hidden;
+    transition: 0.6s ease-in;
 }
 
 .projects::after {
@@ -623,7 +629,7 @@ html {
 }
 
 .projects:hover::before {
-    height: 100%;
+    visibility: visible;
     filter: blur(30px);
 }
 
@@ -633,4 +639,43 @@ html {
     justify-items: center;
     align-items: center;
     gap: 3vw;
+}
+
+.projects i {
+    font-size: 2vw;
+    animation: color-animation 2s infinite;
+    background-color: transparent;
+}
+
+.projects a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5%;
+    right: 5%;
+    z-index: 10;
+    text-decoration: none;
+}
+
+.cursor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    width: 4vw;
+    height: 4vw;
+    border: 0.5vw solid;
+    border-radius: 50%;
+    position: absolute;
+    animation: color-animation 5s infinite, border-animation 5s infinite;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    pointer-events: none;
+    opacity: 0;
+    scale: 0;
+    mix-blend-mode: lighten;
+    z-index: 2;
 }

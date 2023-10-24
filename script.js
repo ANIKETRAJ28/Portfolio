@@ -49,3 +49,35 @@ function cross_animation() {
 }
 
 cross_animation();
+
+function cursoranim() {
+  let projects = document.querySelectorAll(".projects");
+  let cursor = document.querySelector(".cursor");
+  let xval = 0;
+  let yval = 0;
+  projects.forEach((task) => {
+    let newtl = gsap.timeline();
+    task.addEventListener("mouseenter", () => {
+      newtl.to(cursor, {
+        opacity: 1,
+        scale: 1,
+      });
+    });
+    task.addEventListener("mouseleave", () => {
+      newtl.to(cursor, {
+        opacity: 0,
+        scale: 0,
+      });
+    });
+    task.addEventListener("mousemove", (dets) => {
+      xval = dets.x - 30;
+      yval = dets.y + 40;
+      gsap.to(cursor, {
+        left: xval + "px",
+        top: yval + "px",
+      });
+    });
+  });
+}
+
+cursoranim();
