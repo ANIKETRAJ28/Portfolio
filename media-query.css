@@ -89,6 +89,14 @@
         margin-bottom: 8vh;
     }
 
+    .skills-description p {
+        font-size: 0.7rem;
+    }
+
+    .project-heading p {
+        font-size: 0.7rem;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -136,10 +144,6 @@
         margin-bottom: 8vh;
     }
 
-    .skills-section {
-        height: 70vh;
-    }
-
     .nav-tabs>a {
         display: none;
     }
@@ -150,5 +154,13 @@
         visibility: visible;
         padding: 2vh 10vw;
         transition: all 0.5s ease-in-out;
+    }
+
+    .skills-description p {
+        font-size: 0.5rem;
+    }
+
+    .project-heading p {
+        font-size: 0.5rem;
     }
 }

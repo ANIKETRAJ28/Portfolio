@@ -81,3 +81,27 @@ function cursoranim() {
 }
 
 cursoranim();
+
+function imageScroll() {
+  let imgContainer = document.querySelector(".skill-container");
+  let prevBtn = document.querySelector("#btn1");
+  let nextBtn = document.querySelector("#btn2");
+
+  imgContainer.addEventListener("wheel", (dets) => {
+    dets.preventDefault();
+    imgContainer.scrollLeft += dets.deltaY;
+  });
+
+  prevBtn.addEventListener("click", () => {
+    imgContainer.style.scrollBehavior = "smooth";
+    imgContainer.scrollLeft -= 70;
+    console.log("hello");
+  });
+
+  nextBtn.addEventListener("click", () => {
+    imgContainer.style.scrollBehavior = "smooth";
+    imgContainer.scrollLeft += 70;
+  });
+}
+
+imageScroll();

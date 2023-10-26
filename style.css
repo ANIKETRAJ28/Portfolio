@@ -112,7 +112,8 @@ a {
 }
 
 .nav-container {
-    padding: 2rem 5vw;
+    padding-inline: 3vw;
+    padding-block: 1.5vw;
     width: 100%;
     display: flex;
     align-items: center;
@@ -421,7 +422,7 @@ a {
 }
 
 .profile p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 3% 0;
     color: #b8b8b8;
 }
@@ -445,104 +446,149 @@ a {
 }
 
 .skills-section {
-    padding-top: 10vh;
+    padding-block: 5vw;
     width: 100%;
-    height: 100vh;
-    background-color: #151515;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
 }
 
-.skill-container {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10%;
+.skills-description h1 {
+    text-transform: capitalize;
+    animation: color-animation 5s infinite;
+    font-size: 5vw;
+}
+
+.skills-heading {
     display: flex;
-    flex-direction: column;
+    gap: 5vw;
+    align-items: flex-start;
+    padding: 3vw 3vw;
+}
+
+.skills-description {
+    display: flex;
     align-items: center;
-    padding: 0 20vw;
-    border-radius: 4rem;
-    background-image: url(assets/footer-bg.png);
-    background-position: top center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.skills-description {
+    width: 70%;
+}
+
+.skills-img {
+    width: 30%;
+    height: 100%;
+}
+
+.skills-img img {
+    width: 100%;
+    animation: updown 3s linear infinite;
+}
+
+.skills-description p {
+    font-size: 0.9rem;
+    text-align: center;
     color: #ffffff;
 }
 
-.skill-container h1 {
-    text-transform: capitalize;
-    animation: color-animation 5s infinite;
-}
-
-.skill-info {
-    margin: 2vh 0;
-    text-align: center;
-}
-
-.skill-visuals {
+.skills {
     display: flex;
-    width: 100%;
+    align-items: center;
+    margin: 0 auto;
     height: fit-content;
-    overflow-x: scroll;
-    gap: 5vw;
 }
 
-/* .skill-visuals::-webkit-scrollbar {
-    display: none;
-} */
-
-.single-chart {
-    justify-content: space-around;
-}
-
-.circular-chart {
-    display: block;
-    margin: 10px auto;
-    min-width: 8vw;
-}
-
-.circle-bg {
-    fill: none;
-    stroke: #eee;
-    stroke-width: 3.8;
-}
-
-.circle {
-    fill: none;
-    stroke-width: 2.8;
-    stroke-linecap: round;
-    animation: progress 1s ease-out forwards;
-}
-
-@keyframes progress {
-    0% {
-        stroke-dasharray: 0 100;
-    }
-}
-
-.circular-chart.orange .circle {
-    stroke: #ff9f00
-}
-
-/* background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%); */
-.percentage {
-    fill: #666;
-    font-family: sans-serif;
-    font-size: 0.5em;
-    text-anchor: middle;
-}
-
-.skill-representation {
+.skill-container {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    width: 72%;
+    gap: 3vw;
+    overflow-x: scroll;
+}
+
+.skill-container::-webkit-scrollbar {
+    display: none;
+}
+
+.all-skills button {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20%;
+    border: none;
+}
+
+#btn1 {
+    background: #e91e63;
+}
+
+#btn2 {
+    background: #673ab7;
+}
+
+.all-skills button i {
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+.all-skills {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5vw;
+    background-color: #151515;
+    max-width: 58%;
+    margin: 0 auto;
+    padding: 2vw;
+    border-radius: 2vw;
+}
+
+.skill-list {
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    position: relative;
 }
 
-.skill-info {
-    color: #b8b8b8;
+.outer,
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
-.skill-representation h3 {
-    text-transform: uppercase;
-    font-size: 1.5vw;
+.outer {
+    min-width: 10vw;
+    min-height: 10vw;
+}
+
+.inner {
+    min-width: 9vw;
+    min-height: 9vw;
+}
+
+#number {
+    color: #ffffff;
+    font-size: 1vw;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 0.99vw;
+    stroke-dasharray: 472;
+}
+
+.skill-list>svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: fit-content;
+    overflow: hidden;
 }
 
 .project-container {
@@ -564,12 +610,15 @@ a {
 .project-heading h1 {
     text-transform: capitalize;
     animation: color-animation 5s infinite;
+    font-size: 5vw;
+    margin-block-start: 5vw;
 }
 
 .project-heading p {
     margin-block: 3vw;
     color: #b8b8b8;
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .projects {
@@ -639,10 +688,11 @@ a {
     justify-items: center;
     align-items: center;
     gap: 3vw;
+    padding-block: 5vw;
 }
 
 .projects i {
-    font-size: 2vw;
+    font-size: 25px;
     animation: color-animation 2s infinite;
     background-color: transparent;
 }
@@ -678,4 +728,107 @@ a {
     scale: 0;
     mix-blend-mode: lighten;
     z-index: 2;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    padding: 0 3vw;
+    gap: 2vw;
+    background: linear-gradient(270deg, #e91e63 -5.91%, #673ab7 111.58%);
+    padding-top: 5vw;
+}
+
+.contact-img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+}
+
+.contact-img img {
+    width: 100%;
+    height: fit-content;
+}
+
+form {
+    width: 100%;
+    margin-top: 8vw;
+}
+
+.contact-img h1 {
+    font-size: 5vw;
+    text-transform: capitalize;
+    animation: color-animation 5s infinite;
+}
+
+.name,
+.contact {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5vw;
+}
+
+form #first-name,
+form #last-name {
+    width: 50%;
+}
+
+#email,
+#phone {
+    width: 50%;
+}
+
+form #message {
+    width: 100%;
+    height: 15vw;
+}
+
+form button {
+    font-size: 1.5vw;
+    padding: 0.8vw;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: #ffffff65;
+    border: 1px solid #ffffff;
+    border-radius: 0.8vw;
+}
+
+#first-name,
+#last-name,
+#email,
+#phone {
+    height: 3vw;
+}
+
+#first-name,
+#last-name,
+#email,
+#phone,
+#message {
+    outline: none;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+#first-name,
+#last-name,
+#email,
+#phone,
+#message {
+    background: #ffffff2d;
+    border: 1px solid #ffffff;
+    border-radius: 0.8vw;
+    margin-bottom: 0.5vw;
+    padding: 1vw 1vw;
+}
+
+#first-name::placeholder,
+#last-name::placeholder,
+#email::placeholder,
+#phone::placeholder,
+#message::placeholder {
+    color: #ffffff;
 }
