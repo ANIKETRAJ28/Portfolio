@@ -26,7 +26,7 @@ function profileAnimation() {
   });
 
   let soctl = gsap.timeline();
-  soctl.from("#articles,#projects, #about, #home", {
+  soctl.from("#contact,#projects, #skills, #home", {
     y: -100,
     duration: 0.6,
     delay: -0.8,
@@ -87,10 +87,10 @@ function imageScroll() {
   let prevBtn = document.querySelector("#btn1");
   let nextBtn = document.querySelector("#btn2");
 
-  imgContainer.addEventListener("wheel", (dets) => {
-    dets.preventDefault();
-    imgContainer.scrollLeft += dets.deltaY;
-  });
+  // imgContainer.addEventListener("wheel", (dets) => {
+  //   dets.preventDefault();
+  //   imgContainer.scrollLeft += dets.deltaY;
+  // });
 
   prevBtn.addEventListener("click", () => {
     imgContainer.style.scrollBehavior = "smooth";
@@ -105,3 +105,34 @@ function imageScroll() {
 }
 
 imageScroll();
+
+function skill_anim() {
+  let circle = document.querySelectorAll("circle");
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: circle,
+      start: "top 70%",
+      end: "top 40%",
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  tl.to("#html circle, #css circle", {
+    strokeDashoffset: 100,
+  });
+  tl.to("#js circle", {
+    strokeDashoffset: 120,
+    delay: -0.5,
+  });
+  tl.to("#github circle", {
+    strokeDashoffset: 110,
+    delay: -0.5,
+  });
+  tl.to("#cpp circle", {
+    strokeDashoffset: 80,
+    delay: -0.5,
+  });
+}
+
+skill_anim();
