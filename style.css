@@ -778,10 +778,18 @@ circle {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 5%;
-    right: 5%;
     z-index: 10;
     text-decoration: none;
+}
+
+.projects #weblink {
+    bottom: 5%;
+    right: 5%;
+}
+
+.projects #repo {
+    bottom: 5%;
+    left: 5%;
 }
 
 .project-heading .img {
