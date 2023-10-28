@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniket's Portfolio</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-query.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -27,12 +28,10 @@
                     <a href="#" id="home">home</a>
                     <a href="#" id="skills">skills</a>
                     <a href="#" id="projects">projects</a>
-                    <a href="#" id="contact">contact</a>
                 </div>
-                <a href="#" id="home">home</a>
-                <a href="#" id="skills">skills</a>
-                <a href="#" id="projects">projects</a>
-                <a href="#" id="contact">contact</a>
+                <a href="#home-tab" id="home">home</a>
+                <a href="#skill-tab" id="skills">skills</a>
+                <a href="#project-tab" id="projects">projects</a>
             </div>
             <div class="nav-socials">
                 <a href="https://www.linkedin.com/in/aniket-raj-91b269246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -45,9 +44,8 @@
                     rel="noopener noreferrer"><i id="twitter" class="ri-twitter-x-line"></i></a>
             </div>
         </div>
-
         <!-- home page -->
-        <div class="profile-container">
+        <section id="home-tab" class="profile-container">
             <div class="profile-img">
                 <img src="assets/contact-img.svg" alt="">
             </div>
@@ -74,23 +72,26 @@
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <!-- skills section -->
-    <div class="skills-section">
+    <section id="skill-tab" class="skills-section">
         <div class="skills-heading">
             <div class="skills-description">
                 <h1>Skills</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, laboriosam deserunt. Exercitationem
-                    ratione maxime earum harum officia corporis accusantium consequatur?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, tenetur animi! At eos ipsum omnis
-                    sequi accusamus, corporis nisi ducimus nihil blanditiis necessitatibus praesentium, fugiat aliquid
-                    placeat obcaecati assumenda, eius veniam! Exercitationem obcaecati nulla commodi doloremque tenetur
-                    ex, animi est eaque aspernatur, amet sint sit sapiente aliquam porro. Minus, debitis!</p>
+                <div class="skills-img">
+                    <img src="assets/header-img.svg" alt="">
+                </div>
             </div>
-            <div class="skills-img">
-                <img src="assets/header-img.svg" alt="">
-            </div>
+            <p>I bring a diverse set of technical skills to the table, making me a well-rounded and adaptable
+                professional. Proficient in the trinity of web development, I have a solid foundation in HTML, CSS, and
+                JavaScript, allowing me to craft elegant and responsive user interfaces. Furthermore, I've embarked on a
+                journey of mastering data structures and algorithms in C++, enhancing my problem-solving abilities and
+                algorithmic thinking. My familiarity with Git and GitHub is a testament to my commitment to version
+                control and collaborative development, as evidenced by my active participation in Hacktoberfest, where I
+                made meaningful contributions to open-source projects. These experiences have allowed me to deep dive
+                into the world of software development, fostering my passion for creating efficient and maintainable
+                code.</p>
         </div>
         <div class="all-skills">
             <button id="btn1">
@@ -101,7 +102,7 @@
                     <div class="skill-list">
                         <div class="outer">
                             <div class="inner">
-                                <div id="number">85%<br>HTML</div>
+                                <div id="number"><span id="htmlno">85%</span> <br>HTML</div>
                             </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -119,7 +120,7 @@
                     <div class="skill-list">
                         <div class="outer">
                             <div class="inner">
-                                <div id="number">85%<br>CSS</div>
+                                <div id="number"><span id="cssno.">85%</span> <br>CSS</div>
                             </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -137,7 +138,7 @@
                     <div class="skill-list">
                         <div class="outer">
                             <div class="inner">
-                                <div id="number">75%<br>JAVA SCRIPT</div>
+                                <div id="number"><span id="jsno.">75%</span> <br>JAVA SCRIPT</div>
                             </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -155,7 +156,7 @@
                     <div class="skill-list">
                         <div class="outer">
                             <div class="inner">
-                                <div id="number">80%<br>GIT HUB</div>
+                                <div id="number"><span id="gitno.">80%</span> <br>GIT HUB</div>
                             </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -173,7 +174,7 @@
                     <div class="skill-list">
                         <div class="outer">
                             <div class="inner">
-                                <div id="number">90%<br>C++</div>
+                                <div id="number"><span id="c++no.">90%</span><br>C++</div>
                             </div>
                         </div>
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
@@ -192,9 +193,9 @@
                 <i class="ri-arrow-right-s-line"></i>
             </button>
         </div>
-    </div>
+    </section>
     <!-- project section -->
-    <div class="project-container">
+    <section id="project-tab" class="project-container">
         <div class="proj-head">
             <div class="project-heading">
                 <h1>projects</h1>
@@ -202,10 +203,17 @@
                     <img src="assets/hero-image.png" alt="">
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione dolorem nesciunt voluptate at
-                libero perspiciatis laudantium dolore doloribus dicta expedita enim magni, aspernatur ullam quas rem
-                consequuntur cupiditate adipisci ipsum? Repudiandae quam repellendus minima! Numquam quisquam iste
-                fugiat, eligendi quod quasi consectetur ab rem magni dolores quo reprehenderit, consequatur maxime.
+            <p>I believe in learning by doing, and my portfolio is a testament to that philosophy. Over time, I've built
+                and hosted a collection of diverse projects that showcase my continuous journey of learning and refining
+                my coding skills. From a robust password generator that enhances online security to a sleek weather app
+                that provides real-time weather updates, I've explored various aspects of web development. I've also
+                delved into the world of game development with a fun and interactive Tic-Tac-Toe game. In addition, I've
+                created a random image generator to add a touch of randomness and creativity to the mix. These projects
+                are not just static achievements but a reflection of my ongoing commitment to deep dive into the core
+                concepts of HTML, CSS, JavaScript, and C++, ensuring that each project not only works seamlessly but
+                also follows best coding practices. As I continue to build, learn, and refine, my portfolio serves as a
+                living testament to my passion for software development and my dedication to delivering high-quality
+                results.
             </p>
         </div>
         <div class="project-showcase">
@@ -226,6 +234,9 @@
                         class="ri-share-circle-line"></i></a>
             </div>
         </div>
+    </section>
+    <div class="contact"><a href="mailto:aniketraj28042003@gmail.com" target="_blank" rel="noopener noreferrer"><i
+                class="ri-mail-fill"></i></a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="

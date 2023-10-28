@@ -56,26 +56,6 @@
         font-size: 1.2rem;
     }
 
-    .skills-description h1 {
-        margin: 15vw 0vw 10vw 0vw;
-    }
-
-    .skills-description {
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .skills-description p {
-        font-size: 1.2rem;
-    }
-
-    .skills-img {
-        position: absolute;
-        width: 38%;
-        height: auto;
-        right: 10%;
-    }
-
     .all-skills {
         max-width: 80%;
         height: 35vw;
