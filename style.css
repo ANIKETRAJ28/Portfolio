@@ -688,19 +688,25 @@ circle {
 #proj2 {
     background: url(assets/password-generator.jpg);
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
 }
 
 #proj3 {
     background: url(assets/image-generator.jpg);
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
 }
 
 #proj4 {
     background: url(assets/tic-tac-toe.jpg);
     background-size: cover;
-    background-position: top center;
+    background-position: center center;
+}
+
+#proj5 {
+    background: url(assets/music\ player.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 #proj1::after {
@@ -717,6 +723,10 @@ circle {
 
 #proj4::after {
     content: "Project \A Tic Tac Toe Game";
+}
+
+#proj5::after {
+    content: "Project \A Music Player";
 }
 
 .projects::before {
