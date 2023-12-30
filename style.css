@@ -487,9 +487,17 @@ body {
     overflow: hidden;
 }
 
+#resume a{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
 #resume h3,
 #resume i {
     font-size: 1.5vw;
+    color: #ffffff;
 }
 
 .skills-section {
